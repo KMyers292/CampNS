@@ -1,4 +1,8 @@
-const Campground = require('../models/campground'); // Campground mongoose schema.
+//===============================================================================================//
+//                            Controller For The Campground Route                                //
+//===============================================================================================//
+
+const Campground = require('../models/campground');
 const catchAsync = require('../utilities/catchAsync');
 const {cloudinary} = require('../cloudinary');
 const mbxGeocoding = require('@mapbox/mapbox-sdk/services/geocoding');
@@ -7,15 +11,24 @@ const geocoder = mbxGeocoding({accessToken: mapBoxToken});
 const {getWeather} = require('../public/javascripts/weather');
 const {searchByLocation} = require('../public/javascripts/yelpSearch');
 
+//===============================================================================================//
+
+// Renders the index.ejs page.
 module.exports.index = catchAsync(async (req, res) => {
     const campgrounds = await Campground.find({});
     res.render('campgrounds/index', {campgrounds});
 });
 
+//===============================================================================================//
+
+// Renders the new.ejs page.
 module.exports.renderNewForm = (req, res) => {
     res.render('campgrounds/new');
 };
 
+//===============================================================================================//
+
+// Sends the post request to create a new campground.
 module.exports.createCampground = catchAsync(async (req, res) => {
     const geoData = await geocoder.forwardGeocode({
         query: req.body.campground.location,
@@ -31,6 +44,11 @@ module.exports.createCampground = catchAsync(async (req, res) => {
     res.redirect(`/campgrounds/${campground._id}`);
 });
 
+//===============================================================================================//
+
+// Renders the show.ejs page.
+// Fetches the current weather for that campground.
+// Fetches nearby businesses for that campground.
 module.exports.showCampground = catchAsync(async (req, res) => {
     const campground = await Campground.findById(req.params.id).populate({
         path: 'reviews',
@@ -84,6 +102,9 @@ module.exports.showCampground = catchAsync(async (req, res) => {
     res.render('campgrounds/show', {campground});
 });
 
+//===============================================================================================//
+
+// Renders the edit.ejs page.
 module.exports.renderEditForm = catchAsync(async (req, res) => {
     const { id } = req.params;
     const campground = await Campground.findById(id);
@@ -96,6 +117,9 @@ module.exports.renderEditForm = catchAsync(async (req, res) => {
     res.render('campgrounds/edit', {campground});
 });
 
+//===============================================================================================//
+
+// Sends the put request to update a specific campground.
 module.exports.updateCampground = catchAsync(async (req, res) => {
     const { id } = req.params;
     const campground = await Campground.findByIdAndUpdate(id, {...req.body.campground});
@@ -112,6 +136,9 @@ module.exports.updateCampground = catchAsync(async (req, res) => {
     res.redirect(`/campgrounds/${campground._id}`);
 });
 
+//===============================================================================================//
+
+// Sends the delete request to delete a speciic campground.
 module.exports.deleteCampground = catchAsync(async (req, res) => {
     const { id } = req.params;
 

@@ -1,3 +1,7 @@
+//===============================================================================================//
+//                       Function For Catching Errors During Async Operations                    //
+//===============================================================================================//
+
 // Passes in a function that returns a function that will catch any errors when executed.
 module.exports = (func) => {
     return (req, res, next) => {

@@ -1,3 +1,7 @@
+//===============================================================================================//
+//                           Creates A New Mapbox Cluster Map For Use                            //
+//===============================================================================================//
+
 mapboxgl.accessToken = mapToken;
 const map = new mapboxgl.Map({
     container: 'map',
@@ -5,6 +9,8 @@ const map = new mapboxgl.Map({
     center: [-63.3494, 45.1378],
     zoom: 7
 });
+
+//===============================================================================================//
  
 map.on('load', () => {
     // Add a new source from our GeoJSON data and
@@ -17,6 +23,8 @@ map.on('load', () => {
         clusterMaxZoom: 14, // Max zoom to cluster points on
         clusterRadius: 60 // Radius of each cluster when clustering points (defaults to 50)
     });
+
+    //===============================================================================================//
     
     map.addLayer({
         id: 'clusters',
@@ -49,6 +57,8 @@ map.on('load', () => {
             ]
         }
     });
+
+    //===============================================================================================//
     
     map.addLayer({
         id: 'cluster-count',
@@ -61,6 +71,8 @@ map.on('load', () => {
             'text-size': 12
         }
     });
+
+    //===============================================================================================//
     
     map.addLayer({
         id: 'unclustered-point',
@@ -74,6 +86,8 @@ map.on('load', () => {
             'circle-stroke-color': '#fff'
         }
     });
+
+    //===============================================================================================//
     
     // inspect a cluster on click
     map.on('click', 'clusters', (e) => {
@@ -92,6 +106,8 @@ map.on('load', () => {
             }
         );
     });
+
+    //===============================================================================================//
     
     // When a click event occurs on a feature in
     // the unclustered-point layer, open a popup at
@@ -113,6 +129,8 @@ map.on('load', () => {
         .setHTML(`${text}`)
         .addTo(map);
     });
+
+    //===============================================================================================//
     
     map.on('mouseenter', 'clusters', () => {
         map.getCanvas().style.cursor = 'pointer';

@@ -1,3 +1,7 @@
+//===============================================================================================//
+//                              Creates A New Mapbox Map For Use                                 //
+//===============================================================================================//
+
 mapboxgl.accessToken = mapToken;
 const map = new mapboxgl.Map({
     container: 'map', // container ID
@@ -5,6 +9,8 @@ const map = new mapboxgl.Map({
     center: campground.geometry.coordinates, // starting position [lng, lat]
     zoom: 9 // starting zoom
 });
+
+//===============================================================================================//
 
 new mapboxgl.Marker()
 .setLngLat(campground.geometry.coordinates)
