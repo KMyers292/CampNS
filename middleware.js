@@ -1,7 +1,11 @@
+//===============================================================================================//
+//                              Middleware Functions For Routes                                  //
+//===============================================================================================//
+
 const Campground = require('./models/campground'); // Campground mongoose schema.
 const Review = require('./models/review'); // Review mongoose schema.
-const { campgroundSchema, reviewSchema } = require('./joiSchemas'); // Campground and Review Joi schema.
-const ExpressError = require('./utilities/ExpressError');
+const { campgroundSchema, reviewSchema } = require('./joiSchemas'); // Campground and Review Joi schemas.
+const ExpressError = require('./utilities/ExpressError'); // Error handler class for catching errors.
 
 //===============================================================================================//
 
@@ -80,3 +84,5 @@ module.exports.isReviewAuthor = async (req, res, next) => {
         next();
     }
 };
+
+//===============================================================================================//

@@ -2,10 +2,8 @@
 //                              Schemas For The Joi Middleware                                   //
 //===============================================================================================//
 
-// Joi is a data validator for JavaScript.
-const BaseJoi = require('joi');
-// A simple HTML form sanitizer to help prevent scripting attacks.
-const sanitizeHtml = require('sanitize-html');
+const BaseJoi = require('joi'); // Joi is a data validator for JavaScript.
+const sanitizeHtml = require('sanitize-html'); // A simple HTML form sanitizer to help prevent scripting attacks.
 
 // Additional settings/rules for Joi.
 const extension = (joi) => ({
