@@ -135,5 +135,5 @@ const port = process.env.PORT || 3000;
 
 // Starts server on heroku's port or port 3000 if local.
 app.listen(port, () => {
-    console.log('Listening on port 3000');
+    console.log(`Listening on port ${port}`);
 });
