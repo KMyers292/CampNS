@@ -1,6 +1,6 @@
 const Campground = require('./models/campground'); // Campground mongoose schema.
 const Review = require('./models/review'); // Review mongoose schema.
-const { campgroundSchema, reviewSchema } = require('./schemas'); // Campground and Review Joi schema.
+const { campgroundSchema, reviewSchema } = require('./joiSchemas'); // Campground and Review Joi schema.
 const ExpressError = require('./utilities/ExpressError');
 
 //===============================================================================================//

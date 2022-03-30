@@ -1,7 +1,13 @@
+//===============================================================================================//
+//                              Schemas For The Joi Middleware                                   //
+//===============================================================================================//
+
 // Joi is a data validator for JavaScript.
 const BaseJoi = require('joi');
+// A simple HTML form sanitizer to help prevent scripting attacks.
 const sanitizeHtml = require('sanitize-html');
 
+// Additional settings/rules for Joi.
 const extension = (joi) => ({
     type: 'string',
     base: joi.string(),
@@ -24,18 +30,21 @@ const extension = (joi) => ({
 
 const Joi = BaseJoi.extend(extension);
 
+//===============================================================================================//
+
 // Joi schema for campground form validation.
 module.exports.campgroundSchema = Joi.object({
     campground: Joi.object({
         title: Joi.string().required().escapeHTML(),
         price: Joi.number().required().min(0),
-        // image: Joi.string().required(),
         location: Joi.string().required().escapeHTML(),
         description: Joi.string().required().escapeHTML(),
         phone: Joi.string().required().escapeHTML()
     }).required(),
     deleteImages: Joi.array()
 });
+
+//===============================================================================================//
 
 // Joi schema for review form validation.
 module.exports.reviewSchema = Joi.object({
@@ -44,3 +53,5 @@ module.exports.reviewSchema = Joi.object({
         body: Joi.string().required().escapeHTML()
     }).required()
 });
+
+//===============================================================================================//
