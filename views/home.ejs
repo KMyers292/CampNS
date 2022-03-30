@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" rel="preload" as="style"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/home.css">
+    <link rel="stylesheet" href="/stylesheets/general.css">
+    <title>CampNS - Home</title>
+</head>
+<body class="d-flex flex-column text-center text-white vh-100 w-100">
+    <header class="d-flex mb-auto">
+        <div class="cover-container">
+            <video autoplay muted loop id="home_bg_video" tabindex="-1">
+                <source src="/media/NSFlyover.mp4" type="video/mp4">
+            </video>
+        </div>
+        <nav id="home_nav" class="navbar navbar-expand-lg navbar-dark d-flex w-100 justify-content-between align-content-center">
+            <div class="container-fluid">
+                <a class="navbar-brand nav-link" href="/">Camp<span class="ns-yellow">/</span><span class="ns-blue">NS</span></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <% if(!currentUser) {%>
+                        <a class="nav-link" href="/login">Login</a>
+                        <a class="nav-link" href="/register">Sign Up</a>
+                    <% } else {%>
+                        <a class="nav-link" href="/logout">Logout</a>
+                    <% } %>
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </header>
+    <main class="mx-auto">
+        <h1 id="header_title">Welcome To The Great Outdoors</h1>
+        <a href="/campgrounds" id="home_btn" class="btn btn-lg">Start Exploring</a>
+    </main>
+    <footer id="footer_pause" class="mt-auto pb-3">
+        <button id="pause_button" onclick="pauseBtn()">&#9612;&#9612;</button>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+        const video = document.getElementById("home_bg_video");
+        const videoBtn = document.getElementById("pause_button");
+
+        function pauseBtn() {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        }
+    </script>
+</body>
+</html>

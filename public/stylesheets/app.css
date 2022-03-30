@@ -1,0 +1,235 @@
+#camp_nav {
+    font-size: 1.7rem;
+    background-color: #0045B8;
+    box-shadow: 0rem 0.2rem 1rem rgba(0, 0, 0);
+}
+
+#camp_footer {
+    font-size: 1.7rem;
+    background-color: #0045B8;
+    box-shadow: 0rem 0.2rem 1rem rgba(0, 0, 0);
+}
+
+.index-background {
+    background-color: #E8F0FF;
+}
+
+.index-map {
+    width: 100%;
+    height: 40rem;
+}
+
+.index-card-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.index-card {
+    box-shadow: 0 1.4rem 1.8rem rgba(0, 0, 0, 0.4);
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+.index-card:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.4);
+}
+
+.camp_banner {
+    box-shadow: 0rem 0.2rem 4rem rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    margin-bottom: 4rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: rgba(148, 148, 148);
+    background-color: #FFF;
+}
+
+.index-img-fluid {
+    height: 25rem;
+}
+
+.index-card-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-decoration: underline 1px solid #0045B8;
+    margin-bottom: 1rem;
+}
+
+.index-card-body {
+    height: 10rem;
+}
+
+.index-card-text {
+    font-size: 1.4rem;
+}
+
+#login {
+    background-image: url("/media/PeggysCove.jpg");
+    background-size: cover;
+}
+
+.login-container {
+    width: 25%;
+    margin-top: 10rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 1.4rem 1.8rem rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+}
+
+.edit-container {
+    width: 30%;
+    margin-top: 10rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 1.4rem 1.8rem rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+}
+
+.form-label {
+    font-size: 2rem;
+    color: #FFF;
+}
+
+.form-control {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.invalid-feedback {
+    font-size: 1.4rem;
+    color: #D30731;
+}
+
+.form-btn {
+    background-color: transparent;
+    border: 3px solid #0045B8;
+    color: #FFF;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+    
+.form_title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #FFF;
+    text-align: center;
+    text-decoration: underline 2px solid #0045B8;
+}
+
+#register {
+    background-image: url("/media/Cabot_Trail.jpg");
+    background-size: cover;
+}
+
+#new_camp {
+    background-image: url("/media/NS_Forest.jpg");
+    background-size: cover;                      
+    background-repeat: no-repeat;
+}
+
+.input-group-text {
+    height: 3.6rem;
+}
+
+.img-thumbnail {
+    height: 10rem;
+    width: 10rem;
+}
+
+.show-img {
+    height: 40rem;
+    max-height: 40rem;
+}
+
+.show-main {
+    width: 70%;
+}
+
+.show-map {
+    width: 100%;
+    height: 50%;
+}
+
+.show-card-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.show-card-text {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.show-list-item {
+    font-size: 1.6rem;
+}
+
+.show-overview {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+.card-footer {
+    font-size: 1.4rem;
+}
+
+.show-weather {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.show-weather-small {
+    font-size: 1.2rem;
+}
+
+.show-buttons {
+    font-size: 1.4rem;
+}
+
+.show-buttons-small {
+    font-size: 1.2rem;
+}
+
+.business-link {
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+.show-business-card {
+    width: 14rem;
+}
+
+.show-business-img {
+    width: 100%;
+    height: 12rem;
+    object-fit: fill;
+}
+
+.show-business-title {
+    font-size: 1.6rem;
+    color: #000;
+    font-weight: 600;
+}
+
+.show-business-list {
+    font-size: 1.4rem;
+}
+
+.business-title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.show-card {
+    box-shadow: 0 1.4rem 1.8rem rgba(0, 0, 0, 0.4);
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+.show-review-text {
+    font-size: 1.8rem;
+}

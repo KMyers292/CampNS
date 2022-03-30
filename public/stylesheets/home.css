@@ -1,0 +1,60 @@
+#home_bg_video {
+    position: fixed;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    filter: brightness(50%);
+    object-fit: cover;
+}
+
+#home_nav {
+    font-size: 2.5rem;
+    padding: 0 20rem;
+    padding-top: 0.5rem;
+    transition: all 0.6s;
+}
+
+#header_title {
+    font-size: 5rem;
+    font-weight: 700;
+    padding-bottom: 3rem;
+}
+
+#home_btn {
+    color: white;
+    background-color: transparent;
+    border: 2px solid #fff;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+#home_btn:hover,
+#home_btn:focus-visible {
+    color: white;
+    background-color: #0045B8;
+    border-color: transparent;
+}
+
+#home_btn:active {
+    transform: translateY(0.2rem);
+}
+
+#footer_pause {
+    font-size: 1.5rem;
+}
+
+#pause_button {
+    color: #FFF;
+    border: none;
+    background: none;
+}
+
+#pause_button:hover,
+#pause_button:focus-visible {
+    color: #FDD54E;
+    outline: none;
+}
