@@ -35,7 +35,7 @@
 #home_btn:hover,
 #home_btn:focus-visible {
     color: white;
-    background-color: #0045B8;
+    background-color: #4281a4;
     border-color: transparent;
 }
 
@@ -55,6 +55,6 @@
 
 #pause_button:hover,
 #pause_button:focus-visible {
-    color: #FDD54E;
+    color: #ffbf69;
     outline: none;
 }

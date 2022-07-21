@@ -19,23 +19,23 @@
         <div class="container login-container">
             <h1 class="form_title">Sign Up</h1>
             <form action="/register" class="validated-form" method="POST" novalidate>
-                <div class="mb-3">
-                    <label class="form-label" for="username">Username</label>
-                    <input class="form-control" type="text" id="username" name="username" required>
+                <div class="form__group">
+                    <input type="text" class="form__input" placeholder="Username" id="username" name="username" required>
+                    <label for="username" class="form__label">Username</label>
                     <div class="invalid-feedback">Username Cannot Be Blank</div>
                 </div>
-                <div class="mb-3">
-                    <label class="form-label" for="email">Email</label>
-                    <input class="form-control" type="email" id="email" name="email" required>
-                    <div class="invalid-feedback">Email Cannot Be Blank</div>
+                <div class="form__group">
+                    <input type="email" class="form__input" placeholder="Email Address" id="email" name="email" required>
+                    <label for="email" class="form__label">Email</label>
+                    <div class="invalid-feedback">Must Be A Valid Email Address</div>
                 </div>
-                <div class="mb-3">
-                    <label class="form-label" for="password">Password</label>
-                    <input class="form-control" type="password" id="password" name="password" required>
+                <div class="form__group">
+                    <input type="password" class="form__input" placeholder="Password" id="password" name="password" required>
+                    <label for="password" class="form__label">Password</label>
                     <div class="invalid-feedback">Password Cannot Be Blank</div>
                 </div>
-                <div class="d-grid gap-2 submit_box">
-                    <button class="btn btn-primary form-btn submit_btn">Sign Up</button>
+                <div class="form__group form__btn-box">
+                    <button class="form__submit-btn" type="submit">Sign Up</button>
                 </div>
             </form>
         </div>
