@@ -1,17 +1,21 @@
 #camp_nav {
     font-size: 1.7rem;
-    background-color: #0045B8;
+    background-color: #4281a4;
     box-shadow: 0rem 0.2rem 1rem rgba(0, 0, 0);
 }
 
 #camp_footer {
     font-size: 1.7rem;
-    background-color: #0045B8;
+    background-color: #4281a4;
     box-shadow: 0rem 0.2rem 1rem rgba(0, 0, 0);
 }
 
+.footer_text {
+    color: #B7D3E2 !important;
+}
+
 .index-background {
-    background-color: #E8F0FF;
+    background-color: #D4E5EE;
 }
 
 .index-map {
@@ -25,14 +29,14 @@
 }
 
 .index-card {
-    box-shadow: 0 1.4rem 1.8rem rgba(0, 0, 0, 0.4);
-    transition: all 0.3s;
+    transition: all 0.6s;
     border-radius: 5px;
 }
 
 .index-card:hover {
-    transform: translateY(-1rem);
-    box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+    box-shadow: 0 1.4rem 1.8rem rgba(0, 0, 0, 0.4);
+    color: #000;
 }
 
 .camp_banner {
@@ -52,7 +56,6 @@
 .index-card-title {
     font-size: 1.8rem;
     font-weight: 600;
-    text-decoration: underline 1px solid #0045B8;
     margin-bottom: 1rem;
 }
 
@@ -70,12 +73,12 @@
 }
 
 .login-container {
-    width: 25%;
+    width: 30%;
     margin-top: 10rem;
     background-color: rgba(0, 0, 0, 0.7);
     box-shadow: 0 1.4rem 1.8rem rgba(0, 0, 0, 0.4);
     border-radius: 5px;
-    padding: 1rem 1.5rem;
+    padding: 3rem;
 }
 
 .edit-container {
@@ -104,11 +107,20 @@
 
 .form-btn {
     background-color: transparent;
-    border: 3px solid #0045B8;
+    border: 3px solid #fe938c;
     color: #FFF;
     font-weight: 700;
     font-size: 2rem;
     margin: 2rem 0;
+}
+
+.submit_btn:hover {
+    border: 3px solid #4281a4;
+    background-color: #4281a4;
+}
+
+.submit_box {
+    padding-top: 4rem;
 }
     
 .form_title {
@@ -116,7 +128,7 @@
     font-weight: 600;
     color: #FFF;
     text-align: center;
-    text-decoration: underline 2px solid #0045B8;
+    text-decoration: underline 2px solid #fe938c;
 }
 
 #register {
@@ -232,4 +244,11 @@
 
 .show-review-text {
     font-size: 1.8rem;
+}
+
+/* 1200px */
+@media (max-width: 75em) {
+    #index-location {
+        display: none;
+    }
 }

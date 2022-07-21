@@ -17,6 +17,10 @@ html {
     padding: 0;
 }
 
+.red {
+    color: #fe938c;
+}
+
 .ns-blue {
     color: #0045B8;
 }
@@ -29,14 +33,10 @@ html {
     color: #D30731;
 }
 
-.navbar-brand {
-    font-size: 3rem;
-}
-
 .nav-link {
     margin-left: 2rem;
     font-weight: 700;
-    color: rgba(255,255,255,0.5);
+    color: #B7D3E2 !important;
     border-bottom: 0.2rem solid transparent;
     position: relative;
     transition: all 0.3s;
@@ -49,12 +49,17 @@ html {
     left: 0;
     width: 0;
     height: 0.3rem;
-    background: #FDD54E;
+    background: #fe938c;
     transition: all 0.3s;
 }
 
+.navbar-brand {
+    font-size: 3rem;
+    color: #FFF !important;
+}
+
 .navbar-nav:hover .nav-link:hover {
-    color: #FFF;
+    color: #FFF !important;
 }
 
 .navbar-nav:active .nav-link:active {
